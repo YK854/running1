@@ -1,0 +1,20 @@
+<h4>新規投稿</h4>
+<p>必要事項入力後保存ボタンを押してください</p>
+<p>
+  一覧へ戻る場合は<%= link_to'こちら', books_path %>
+  クリックしてください！
+</p>
+
+<%= form_with model:@book,url:books_path, local:true do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.submit '保存' %>
+  </div>
+<% end %>

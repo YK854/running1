@@ -1,0 +1,18 @@
+<h4>投稿内容編集</h4>
+<%= form_with model:@book,url:book_path(@book.id),local:true do |f| %>
+  <div>
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.submit '変更を保存' %>
+  </div>
+<% end %>

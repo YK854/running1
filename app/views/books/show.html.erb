@@ -1,0 +1,17 @@
+<h4>投稿詳細</h4>
+<table>
+  <tr>
+    <th>投稿ID</th>
+    <th>投稿タイトル</th>
+    <th>投稿内容</th>
+  </tr>
+  <tr>
+    <td><%= @book.id %></td>
+    <td><%= @book.title %></td>
+    <td><%= @book.body %></td>
+  </tr>
+  <tr>
+    <td><%= link_to '戻る', books_path %></td>
+    <td><%= link_to '編集', edit_book_path(@book) %></td>
+  </tr>
+</table>
